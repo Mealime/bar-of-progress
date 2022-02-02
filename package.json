@@ -8,6 +8,7 @@
   "repository": "badrap/bar-of-progress",
   "author": "Joachim Viide <jviide@iki.fi>",
   "license": "MIT",
+  "files": ["dist/"],
   "scripts": {
     "lint": "eslint --ignore-path .gitignore --max-warnings 0 --ext=.js,.ts src",
     "build": "rm -rf dist && microbundle",
