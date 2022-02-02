@@ -70,12 +70,6 @@ export default class ProgressBar {
       transition: "width 0.1s ease-out, opacity 0.5s ease 0.2s",
     };
 
-    const glowStyle = {
-      opacity: 0.4,
-      boxShadow: "3px 0 8px",
-      height: "100%",
-    };
-
     let timeout: number | undefined | null;
     let current!: HTMLElement;
 
@@ -86,10 +80,6 @@ export default class ProgressBar {
       current = document.body.appendChild(document.createElement("div"));
       current.className = config.className + " stopped";
       assign(current.style, initialStyle);
-
-      const glow = current.appendChild(document.createElement("div"));
-      glow.className = "glow";
-      assign(glow.style, glowStyle);
 
       if (timeout != null) {
         clearTimeout(timeout);
